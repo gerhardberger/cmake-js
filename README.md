@@ -145,6 +145,7 @@ Options:
                          -D<your-arg-here>                              [string]
   -o, --out              Specify the output directory to compile to, default is
                          projectRoot/build                              [string]
+  --si, --silent         Prevents cMake to print to the stdio          [boolean]
 ```
 
 **Requirements:**

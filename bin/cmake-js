@@ -117,6 +117,11 @@ var yargs = require("yargs")
           alias: "out",
           describe: "Specify the output directory to compile to, default is projectRoot/build",
           type: "string"
+        },
+        "si": {
+          alias: "silent",
+          describe: "Prevents cMake to print to the stdio",
+          type: "boolean"
         }
     });
 var argv = yargs.argv;
@@ -161,7 +166,8 @@ var options = {
     runtimeVersion: argv.v,
     arch: argv.a,
     cMakeOptions: customOptions,
-    out: argv.o
+    out: argv.o,
+    silent: argv.si
 };
 
 log.verbose("CON", "options:");
